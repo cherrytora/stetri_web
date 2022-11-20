@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/index';
 import Token from './pages/token';
 import Nft from './pages/nft';
 import Us from './pages/us';
+import Shop from './pages/shop';
+import Navbar from './pages/navbar';
 
 // web3
 // import { ethers } from "ethers";
@@ -20,12 +21,13 @@ function App() {
 return (
 	
 	<Router>
-	{/* <Navbar /> */}
+	<Navbar />
 	<Routes>
-		<Route exact path='/index' element={<Home />}/>
+		<Route exact path='/' element={<Home />}/>
 		<Route path='/token' element={<Token/>} />
 		<Route path='/nft' element={<Nft/>} />
 		<Route path='/us' element={<Us/>} />
+		<Route path='/shop' element={<Shop/>} />
 	</Routes>
 	</Router>
 );}

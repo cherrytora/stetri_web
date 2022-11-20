@@ -38,7 +38,8 @@
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ecb807;
-  --bs-danger: #dc3545;
+  /* --bs-danger: #dc3545; */
+  --bs-danger: #d6df5e;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 29, 128, 159;
@@ -3180,8 +3181,10 @@ textarea.form-control-lg {
 
 .btn-danger {
   color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
+  /* background-color: #dc3545;
+  border-color: #dc3545; */
+  background-color: #c88a68;
+  border-color: #c88a68;
 }
 .btn-danger:hover {
   color: #fff;
@@ -11420,18 +11423,18 @@ html {
 }
 
 .callout {
-  padding: 15rem 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-callout.jpg");
+  padding: 3rem 0;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/home_bg.jpg");
   background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: contain;
 }
-.callout h2, .callout .h2 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  display: block;
-  max-width: 30rem;
-}
+
+@media (min-width: 992px) {
+  .callout {
+    height: 100vh;
+  }}
 
 footer.footer {
   padding-top: 5rem;
@@ -11469,18 +11472,12 @@ footer.footer .social-link:hover {
   }
 }
 .masthead {
-  min-height: 30rem;
-  position: relative;
-  display: table;
+  padding: 15rem 0;
   width: 100%;
-  height: auto;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-masthead.jpg"); */
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/home_bg.jpg");
   background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: contain;
 }
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
