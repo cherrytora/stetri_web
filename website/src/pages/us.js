@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Nft = () => {
+const Us = () => {
 return (
 	<>
 	<head>
@@ -57,4 +57,4 @@ return (
 
 );};
 
-export default Nft;
+export default Us;

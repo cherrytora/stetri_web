@@ -1,5 +1,4 @@
 import React from 'react';
-//import { NetworkErrorMessage } from "./NetworkErrorMessage";
 
 export default function Home() {
     return (

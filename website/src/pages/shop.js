@@ -79,6 +79,7 @@ return (
 
 
 
-);};
+);
+};
 
 export default intro;
