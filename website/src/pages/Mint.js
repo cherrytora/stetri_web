@@ -1,32 +1,23 @@
-import React from "react";
+import { ethers } from "ethers";
+import STTcoin from "../contracts/StetriTest.json";
+import contract_address from "../contracts/contract-address.json";
 
-export function MintNFT({ mintNFT }) { 
-  // 建立mintNFT這個function，把在前端的入的to傳到Dapp.js中
-  return (
-    <div>
-      <h4>MintNFT</h4> 
-      <form
-        onSubmit={(event) => {
-          // This function just calls the transferTokens callback with the
-          // form's data.
-          event.preventDefault();
+const NETWORK_ID = '5';
 
-          const formData = new FormData(event.target);
-          const to = formData.get("to");
 
-          if (to) {
-            mintNFT(to);
-          }
-        }}
-      >
-        <div className="form-group">
-          <label>NFT Mint address</label>
-          <input className="form-control" type="text" name="to" required />
-        </div>
-        <div className="form-group">
-          <input className="btn btn-primary" type="submit" value="Mint" />
-        </div>
-      </form>
-    </div>
-  );
+export const Transfer = async (to) => {
+  if (window.ethereum.networkVersion === NETWORK_ID) {
+    //send SST
+    const node = contract_address.url
+    const provider = new ethers.providers.JsonRpcBatchProvider(node)
+    const private_key = contract_address.private_key
+    const wallet = new ethers.Wallet(private_key, provider)
+    const tokenaddress = contract_address.StetriTest
+    const sstani = STTcoin.abi
+    const sender = "0x27ae32af2e3A20a2AeFE7E4adef78C1884AcC2db"
+
+
+
+  }
+  alert("please switch to Georli testnet!")
 }
