@@ -18,7 +18,7 @@ return (
 						<div class="card">
 							<img src="../assets/img/pecu.jpg" class="card-img-top" alt="..."></img>
 							<div class="card-body">
-							<h5 class="card-title">Pecu</h5>
+							<h5 class="card-title">Adviser : Pecu</h5>
 							<p class="card-text">pecu@ntnu.edu.tw</p>
 							<p class="card-text">https://pecu.github.io/peculab/</p>
 							</div>
@@ -26,7 +26,7 @@ return (
 						<div class="card">
 							<img src="../assets/img/emma.jpg" class="card-img-top" alt="..."></img>
 							<div class="card-body">
-							<h5 class="card-title">Emma</h5>
+							<h5 class="card-title">Leader : Emma</h5>
 							<p class="card-text">masterthesis.aug@gmail.com</p>
 							<p class="card-text">https://github.com/cherrytora</p>
 							</div>
@@ -34,7 +34,7 @@ return (
 						<div class="card">
 							<img src="../assets/img/yvonne.jpg" class="card-img-top" alt="..."></img>
 							<div class="card-body">
-							<h5 class="card-title">Yvonne</h5>
+							<h5 class="card-title">Member : Yvonne</h5>
 							<p class="card-text">yvonne2015feng@gmail.com</p>
 							<p class="card-text">https://github.com/0yfeng</p>
 							</div>
@@ -42,7 +42,7 @@ return (
 						<div class="card">
 							<img src="../assets/img/kenny.jpg" class="card-img-top" alt="..."></img>
 							<div class="card-body">
-							<h5 class="card-title">Kenny</h5>
+							<h5 class="card-title">Member : Kenny</h5>
 							<p class="card-text">kennywang2003@gmail.com</p>
 							<p class="card-text">https://github.com/kennywang112</p>
 							</div>

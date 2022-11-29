@@ -5,6 +5,7 @@ import contract_address from "../contracts/contract-address.json";
 
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 
 // import Collapse from 'react-bootstrap/Collapse';
 // import { Link } from "react-router-dom";
@@ -15,9 +16,11 @@ const Token = () => {
 	const [isConnected, setConnected] = useState(false);
 	const [isLogged, setLogged] = useState(false);
 	const [accounts, setAccounts] = useState();
+	const [isLoading, setLoading] = useState(false);
+	const [finish, setfinish] = useState(false);
+	const [txlink, settx] = useState();
     
 	const connectWallet = async () => {
-		// to detect whether the wallet is installed
 		if (isConnected === false){
 		  if (window.ethereum) {
 			const accounts = await window.ethereum.request({ 
@@ -39,6 +42,7 @@ const Token = () => {
 	const sstani = STTcoin.abi
 	const contract = new ethers.Contract(tokenaddress, sstani, wallet)
 	const NETWORK_ID = '5'
+	const hxlink = "https://goerli.etherscan.io/tx/"
 
 	async function sendsst (to) {
 		if (window.ethereum.networkVersion === NETWORK_ID) {
@@ -46,8 +50,9 @@ const Token = () => {
 			contract.transfer(to, ethers.utils.parseEther('5', decimals))
 			.then(function(tx){
 				console.log(tx);
-				// settx(tx);
-				alert("transfer seccuss! This is the transfer hash =>  "+tx.hash);
+				// alert("transfer seccuss! This is the transfer hash =>  "+tx.hash);
+				setfinish(true);
+				settx(hxlink + tx.hash);
 			})
 		} else {
 			alert("please switch to Georli testnet!")
@@ -78,27 +83,44 @@ return (
 
 		}
 
-		{accounts &&
-		<div class="container px-4 px-lg-5 text-center">
-			<div class="row gx-5 gx-lg-7 justify-content-center">
-				<div class="col-lg-10"> 
-				<p>
-					<h2>Welcome to Stetri World!</h2>
-					<p>{accounts}</p>
-				</p>
+	{accounts &&
+			<div class="container px-4 px-lg-5 text-center">
+				<div class="row gx-5 gx-lg-7 justify-content-center">
+					<div class="col-lg-10"> 
+					<p>
+						<h3>Your wallet address is</h3>
+						<p class="lead mb-7">{accounts}</p>
+					</p>
+					</div>
 				</div>
+				<p>
+				{!isLoading && 
+					<Button
+						onClick={() => {setLoading(true);
+										sendsst(String(accounts));}
+								}
+						aria-controls="example-collapse-text">
+						GET Stetri Logo NFT here !
+					</Button>
+					}
+				{isLoading &&
+					<p>
+						{!finish &&
+						<p>Please wait a second...
+						<Spinner animation="grow" />
+						</p> 
+							}
+						{finish &&
+						<p>You can check transaction
+						<a href={String(txlink)}> Here </a>
+						</p>
+						}
+					</p>
+				}	
+				</p>
 			</div>
-			<p>
-				<Button
-					onClick={() => sendsst(String(accounts))}
-					aria-controls="example-collapse-text">
-					GET 5 Stetri Coin here !
-				</Button>
-			</p>
-		</div>
-		}
+	}
 	</body> 
-
 	</>
 
 
