@@ -111,8 +111,8 @@ return (
 						</p> 
 							}
 						{finish &&
-						<p>You can check transaction
-						<a href={String(txlink)}> Here </a>
+						<p>Check your transaction 
+						<a href={String(txlink)} target="_blank"> Here </a>
 						</p>
 						}
 					</p>
