@@ -145,7 +145,8 @@
 - [Step Trip 踏步行](https://main.df8ieuo49110y.amplifyapp.com/)
 - 另外我也有把領取Token和NFT的頁面，可以用matamask的手機App掃QR code，一樣可以領取Token喔！
     - Stetri coin
-    <img src="website/public/assets/ORcode/Token.png" alt="Cover" width="30%"/>
+    <img src="website/public/assets/ORcode/Token.png" alt="Cover" width="30%"/> 
+    
     - Stetri NFT
     <img src="website/public/assets/ORcode/NFT.png" alt="Cover" width="30%"/>
 
