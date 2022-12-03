@@ -7,10 +7,6 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 
-// import Collapse from 'react-bootstrap/Collapse';
-// import { Link } from "react-router-dom";
-
-
 const Token = () => {
 	
 	const [isConnected, setConnected] = useState(false);
@@ -100,7 +96,7 @@ return (
 										sendsst(String(accounts));}
 								}
 						aria-controls="example-collapse-text">
-						GET Stetri Logo NFT here !
+						GET 5 Stetri coins here! !
 					</Button>
 					}
 				{isLoading &&
@@ -127,45 +123,3 @@ return (
 );};
 
 export default Token;
-
-
-
-
-
-// const Token = () => {
-// 	const [open, setOpen] = useState(false);
-
-// return (
-// 	<>
-// 	<head>
-//     	<link href="css/styles.css" rel="stylesheet" />		
-//   </head>
-
-// 	<body class="callout px-5 px-lg-7 text-center">
-// 		<p>
-// 		<Button
-// 			onClick={() => setOpen(!open)}
-// 			aria-controls="example-collapse-text"
-// 			aria-expanded={open}
-// 		>
-// 			click
-// 		</Button>
-// 		</p>
-
-// 		<Collapse in={open}>
-// 			<div id="example-collapse-text">
-// 			<div class="card card-body">
-// 			Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-// 			terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-// 			labore wes anderson cred nesciunt sapiente ea proident.
-// 			</div>
-// 			</div>
-// 		</Collapse>
-	
-// 	</body>
-// 	</>
-
-
-// );};
-
-// export default Token;
