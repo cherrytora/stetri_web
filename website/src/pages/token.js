@@ -66,6 +66,7 @@ return (
 	<body class="masthead d-flex align-items-center">
 		{!accounts &&
 		<div class="container px-5 px-lg-7 text-center">
+			<img src="../assets/ORcode/Token.png" alt="Cover" width="27%" />
 			<div class="row gx-5 gx-lg-7 justify-content-center">
 				<div class="col-lg-10"> 
 					<h2>Welcome to Stetri World!</h2>
@@ -81,6 +82,7 @@ return (
 
 	{accounts &&
 			<div class="container px-4 px-lg-5 text-center">
+				<img src="../assets/ORcode/Token.png" alt="Cover" width="27%" />
 				<div class="row gx-5 gx-lg-7 justify-content-center">
 					<div class="col-lg-10"> 
 					<p>
@@ -107,8 +109,8 @@ return (
 						</p> 
 							}
 						{finish &&
-						<p>Check your transaction 
-						<a href={String(txlink)} target="_blank"> Here </a>
+						<p>Check your transaction
+						<p><a href={String(txlink)} target="_blank" rel="noreferrer" class="lead mb-5"><b>Here</b></a></p>
 						</p>
 						}
 					</p>
