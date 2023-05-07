@@ -142,7 +142,7 @@
 - 上傳到github，然後連結AWS的Amplify服務就可以了，私鑰那些的可以在設定的時候手動輸入，就不用擔心.env檔案沒有上傳github讀不到參數的問題
 
 #### 成果網址
-- [Step Trip 踏步行](https://main.df8ieuo49110y.amplifyapp.com/)
+- [Step Trip 踏步行](https://main.d2srd5wofp7mto.amplifyapp.com/)
 - 另外我也有把領取Token和NFT的頁面，可以用matamask的手機App掃QR code，一樣可以領取Token喔！
     - Stetri coin
     <img src="website/public/assets/ORcode/Token.png" alt="Cover" width="30%"/> 
